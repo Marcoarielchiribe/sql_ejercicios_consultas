@@ -1,2 +1,2 @@
-# sql_ejercicios_consultas
-Ejercicios de SQL de DB en MySQL
+# sql_ejercicios
+Ejercicios de SQL en MySQL donde estoy profundizando desde consultas basicas a complejas, en este camino como administrador
