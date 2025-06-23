@@ -1,4 +1,4 @@
-
+USE tienda;
 /**
 1.1.3 Consultas sobre una tabla
 Lista el nombre de todos los productos que hay en la tabla producto.
@@ -431,8 +431,10 @@ WHERE p.precio >= 180
 GROUP BY f.nombre;
 
 -- Lista el precio medio los productos de cada fabricante, mostrando solamente el identificador del fabricante.
-SELECT id_fabricante, AVG(precio) AS 'Precio Medio' FROM producto
-GROUP BY id_fabricante;
+
+SELECT p.id_fabricante, AVG(p.precio) AS 'Precio Medio' FROM producto p
+INNER JOIN fabricante f ON p.id_fabricante = f.id
+GROUP BY p.id_fabricante;
 
 -- Lista el precio medio los productos de cada fabricante, mostrando solamente el nombre del fabricante.
 SELECT f.nombre, AVG(p.precio) AS 'Precio Medio' FROM producto p
